@@ -1,0 +1,109 @@
+body{
+	background-color: thistle;
+	height: 100%;
+	width: 100%;
+}
+#title{
+	font-family: "Courier New";
+	width: 695px;
+	margin: 0 auto;
+	font-size: 2em;
+}
+#wrapper{
+	background-color: lightsteelblue;
+	margin: 0 auto;
+	width: 500px;
+	height:400px;
+	text-align: center;
+	border: 2px solid #1f47da;
+}
+#sign-in{
+	margin: 0 auto;
+	position: relative;
+	top: 100px;
+	width: 500px;
+	height: 200px;
+	
+}
+label.welcPg{
+	font-size: 1.7em;
+}
+input.welcPg{
+	width: 270px;
+	height: 25px;
+	font-size: 1.5em;
+	vertical-align: middle;
+}
+#inputs{
+	display: block;
+}
+#signin{
+	font-size: 1.7em;
+	position: relative;
+	top: 15px;
+}
+#reg{
+	position: relative;
+	top: 100px;
+}
+#regLink{
+	font-size: 1.2em;
+}
+
+.formpart{
+	display: block;
+	margin: 10px;
+}
+#regwrap{
+	text-align: center;
+}
+
+label.regform{
+	font-size: 1.7em;
+}
+
+input.regform{
+	width: 270px;
+	height: 25px;
+	font-size: 1.5em;
+	vertical-align: middle;
+}
+textarea.regform{
+	position: relative;
+	top: 40px;
+	width:300px;
+	height:100px;
+}
+#userPosts{
+	background-color: lightsteelblue;
+	width: 700px;
+	height: auto;
+	margin: 0 auto;
+	border: 2px solid #1f47da;
+	position: relative;
+
+}
+#feedPoster{
+	position: relative;
+	top: 45px;
+	width: 600px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+#postBox{
+	font-size: 1.5em;
+	display: block;
+	width: 550px;
+	height:130px;
+	margin: 0 auto;
+}
+.menuIcons{
+	position: relative;
+	left: 285px;
+	display: inline-block;
+	padding: 5px;
+	border: 2px solid #1f47da;
+	background-color: lightsteelblue;
+}
+

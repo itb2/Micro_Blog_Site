@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bloggy: Register</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="regwrap">
+		<h1>Register For Bloggy: Your own personal Blog Space</h1>
+		<form method='post' action='/registering'>
+			<div class="formpart">
+				<label class="regform">First Name:</label>
+				<input class='regform' type="name" name="fname" required>
+				<label class='regform'>Last Name:</label>
+				<input class='regform' type="name" name="lname" required>
+			</div>
+			<div class="formpart">
+				<label class='regform'>Email:</label>
+				<input class='regform' type="email" name="email" required>
+				<label class='regform'>Password:</label>
+				<input class='regform' type="password" name="password" required>
+			</div>
+			<div class="formpart">
+				<label class='regform'>Location</label>
+				<input class='regform' type="text" name="location">
+				<label class='regform'>Birthday</label>
+				<input class='regform' type="date" name="birthday">
+			</div>
+			<div class="formpart">
+				<label class='regform'>Bio:</label>
+				<textarea class='regform' name="bio" maxlength="150"></textarea>
+			</div>
+			<button type=submit id="signin">Submit</button>
+		</form>
+	</div>
+</body>
+</html>

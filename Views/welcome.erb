@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Bloggy</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body style=" border: none;">
+
+	<h1><div id="title" style="color: #1f47da">Welcome to Bloggy!</div></h1>
+
+	<div id='wrapper'>
+		
+		<div id="sign-in">
+			<form id="signInform" method='post' action='/sign-in'>
+				<div class="inputs">
+					<label class="welcPg">Email:</label>
+					<input class="welcPg" type="email" name="email" required>
+				</div>
+				<div class="inputs">
+					<label class="welcPg" >Password:</label>
+					<input class="welcPg" type="password" name="password" required>
+				</div>
+				<button id="signin" type="Submit" name='Submit'>Sign In</button>
+			</form>
+
+		</div>
+		<div id="reg">
+			<p id="regLink">Don't have an account? <a href="/register">Click Here To Register >> </a></p>
+		</div>
+
+
+
+	</div>
+
+</body>
+</html>
