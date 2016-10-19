@@ -22,7 +22,7 @@ post '/sign-in' do
 	 end
 end
 
-post '/sign-out' do
+get '/sign-out' do
 	#do stuff with sessions
  	session[:user_id] = nil
 	redirect '/'
@@ -50,7 +50,7 @@ post '/registering' do
 end
 
 get '/home' do
-	
+
 	@user = User.where(id: session[:user_id]).first 
 	
 	erb :home
@@ -68,6 +68,23 @@ post '/home/posting' do
 	redirect '/home'
 end
 
+get '/deleting' do
+	Post.delete(params[:id])
+	redirect '/profile'
+
+end
+
+get '/profile' do
+	@user = User.where(id: session[:user_id]).first
+	erb :profile
+
+end
+
+get '/settings' do
+	@user = User.where(id: session[:user_id]).first
+	erb :settings
+
+end
 
 not_found do
   halt 404, 'page not found'

@@ -86,7 +86,7 @@ textarea.regform{
 #feedPoster{
 	position: relative;
 	top: 45px;
-	width: 600px;
+	width: 700px;
 	height: auto;
 	margin: 0 auto;
 	text-align: center;
@@ -105,5 +105,11 @@ textarea.regform{
 	padding: 5px;
 	border: 2px solid #1f47da;
 	background-color: lightsteelblue;
+}
+
+#delete:hover{
+	color: #1f47da;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
