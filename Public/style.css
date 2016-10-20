@@ -1,5 +1,5 @@
 body{
-	background-color: thistle;
+	background-color: mistyrose;
 	height: 100%;
 	width: 100%;
 }
@@ -10,12 +10,12 @@ body{
 	font-size: 2em;
 }
 #wrapper{
-	background-color: lightsteelblue;
+	background-color: thistle;
 	margin: 0 auto;
 	width: 500px;
 	height:400px;
 	text-align: center;
-	border: 2px solid #1f47da;
+	border: 3px solid black;
 }
 #sign-in{
 	margin: 0 auto;
@@ -40,7 +40,7 @@ input.welcPg{
 #signin{
 	font-size: 1.7em;
 	position: relative;
-	top: 15px;
+	top: 25px;
 }
 #reg{
 	position: relative;
@@ -75,11 +75,11 @@ textarea.regform{
 	height:100px;
 }
 #userPosts{
-	background-color: lightsteelblue;
+	background-color: thistle;
 	width: 700px;
 	height: auto;
 	margin: 0 auto;
-	border: 2px solid #1f47da;
+	border: 2px solid black;
 	position: relative;
 
 }
@@ -99,17 +99,29 @@ textarea.regform{
 	margin: 0 auto;
 }
 .menuIcons{
+	text-shadow: 2px 1px blue;
 	position: relative;
 	left: 285px;
 	display: inline-block;
 	padding: 5px;
-	border: 2px solid #1f47da;
-	background-color: lightsteelblue;
+}
+.menuIcons:hover{
+	color: thistle;
+	text-decoration: underline;
+}
+#delete{
+	color: black;
 }
 
 #delete:hover{
-	color: #1f47da;
+	color: mistyrose;
 	text-decoration: underline;
 	cursor: pointer;
 }
-
+#userlink{
+	color: black;
+}
+#userlink:hover{
+	color: blue;
+	text-decoration: underline;
+}

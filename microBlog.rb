@@ -12,7 +12,6 @@ end
 post '/sign-in' do
 	#do stuff with sessions
 	 @user = User.where(email: params[:email]).first  
-	 puts @user.id 
 	 if @user.password == params[:password]
 	    session[:user_id] = @user.id
 	    puts session[:user_id]
@@ -57,9 +56,10 @@ get '/home' do
 end
 
 post '/home/posting' do
-	@user = User.where(id: session[:user_id]).first
+	@user = User.where(id: params[:id]).first
 	Post.create(
 		userName: @user.fname+" " +@user.lname,
+		userId: @user.id,
 		text: params[:post],
 		title: params[:ptitle],
 		posted_at: DateTime.now
@@ -69,13 +69,19 @@ post '/home/posting' do
 end
 
 get '/deleting' do
-	Post.delete(params[:id])
-	redirect '/profile'
+	usery = Post.where(id: params[:id]).first
 
+	if session[:user_id] == usery.userId
+		Post.delete(params[:id])
+	else
+		flash = { success: "You cant delete other people's posts, silly goose!"}
+	end
+
+	redirect '/home'
 end
 
 get '/profile' do
-	@user = User.where(id: session[:user_id]).first
+	@user1 = User.where(id: params[:id]).first
 	erb :profile
 
 end
@@ -83,6 +89,20 @@ end
 get '/settings' do
 	@user = User.where(id: session[:user_id]).first
 	erb :settings
+
+end
+
+post '/updating' do
+	User.update(
+		email: params[:email],
+		password: params[:password],
+		fname: params[:fname],
+		lname: params[:lname],
+		location: params[:location],
+		bio: params[:bio],
+		birthday: params[:birthday],
+		)
+	redirect '/profile'
 
 end
 

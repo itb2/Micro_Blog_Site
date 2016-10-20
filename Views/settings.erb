@@ -7,9 +7,36 @@
 </head>
 <body>
 	<div id="menu" style="font-size: 2em;">
-		<a href='/profile' style="color: black"><div class="menuIcons">Profile</div></a>
+		<a href='/home' style="color: black"><div class="menuIcons">Home</div></a>
 		<a href='/sign-out' style="color: black"><div class="menuIcons">Log Out</div></a>
 	</div>
+
+
+	<form method='post' action='/updating'>
+			<div class="formpart">
+				<label class="regform">First Name:</label>
+				<input class='regform' type="name" name="fname" value="<%= @user.fname %>" required>
+				<label class='regform'>Last Name:</label>
+				<input class='regform' type="name" name="lname" value="<%= @user.lname %>" required>
+			</div>
+			<div class="formpart">
+				<label class='regform'>Email:</label>
+				<input class='regform' type="email" name="email" value="<%= @user.email %>" required>
+				<label class='regform'>Password:</label>
+				<input class='regform' type="password" name="password"  value="<%= @user.password %>" required>
+			</div>
+			<div class="formpart">
+				<label class='regform'>Location</label>
+				<input class='regform' type="text" name="location" value="<%= @user.location %>">
+				<label class='regform'>Birthday</label>
+				<input class='regform' type="date" name="birthday" value="<%= @user.birthday %>">
+			</div>
+			<div class="formpart">
+				<label class='regform'>Bio:</label>
+				<input class='regform' name="bio" type="bio" value="<%= @user.bio %>"></input>
+			</div>
+			<button type=submit id="signin">Update</button>
+		</form>
 
 </body>
 </html>

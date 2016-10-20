@@ -6,26 +6,28 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body style="text-align: center;">
-	<h1 style="font-size: 2.5em; text-shadow: 1px 1px white;position: relative; top:125px; right: 95px;">Start Postin', <%= @user.fname %>!</h1>
+	<h1 style="font-size: 2.2em; text-shadow: 1px 1px blue;position: relative; top:115px; right: 165px;">Start Postin', <%= @user.fname %>!</h1>
 	<div id="menu" style="position: relative; bottom: 40px; font-size: 2em;">
-		<a href='/profile' style="color: black"><div class="menuIcons">Profile</div></a>
-		<a href='/sign-out' style="color: black"><div class="menuIcons">Log Out</div></a>
+		<a href='/profile?id=<%= @user.id %>' style="color: black"><div class="menuIcons">Profile</div></a>
+		<a href='/settings' style="color: black"><div class="menuIcons">Settings</div></a>
 	</div>
 	<div id="feedPoster">
-		<div style="width: 640px; padding: 30px 30px 35px 30px; border: 2px solid #1f47da; background-color: lightsteelblue;">
-			<form  method="post" action='/home/posting'">
+		<div style="width: 640px; padding: 30px 30px 35px 30px; border: 3px solid black; background-color: thistle;">
+			<form  method="post" action='/home/posting?id=<%= @user.id %>'>
 				<input type="text" name="ptitle" placeholder="Title..." style="font-size: 1.5em; position: relative; width: 550px;">
 				<textarea name="post" id="postBox" maxlength="150" placeholder="Type your post here... " required></textarea>
 	 			<button type=submit id="signin">Post</button>
 			</form>
 		</div>
 		
-		<h1 style="position: relative; top: 20px; right: 220px; text-shadow: 1px 1px white">Post Feed:</h1>
+		<h1 style="position: relative; top: 20px; right: 270px; text-shadow: 1px 1px blue">Post Feed:</h1>
 		<div id="userPosts">
+
+
 			<% (Post.all).reverse.each do |x| %>
-				<div style="border:1px solid #1f47da; background-color: lightsteelblue; ">
-			  		<h2 style=" text-shadow: 1px 1px white"><%= x.title %></h2>
-			  		<h3 style=""><%= x.userName %></h3>
+				<div style="border:1px solid black; background-color: thistle; ">
+			  		<h2 style="color: black;  text-shadow: 1px 1px white"><%= x.title %></h2>
+			  		<a href="/profile?id=<%= x.userId %>" id="userlink"><h3 style=""><%= x.userName %></h3></a>
 			  		<p style=""><%= x.text %></p>
 			  		<p style=""><%= x.posted_at %></p>
 			  	</div>

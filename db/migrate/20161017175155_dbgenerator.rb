@@ -14,6 +14,7 @@ class Dbgenerator < ActiveRecord::Migration
 
   	create_table :posts do |t|
   		t.string   :userName
+      t.integer  :userId
   		t.string   :text
   		t.string   :title
   		t.datetime :posted_at
